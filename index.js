@@ -29,3 +29,14 @@ Array.from(passwordsEl.children).forEach(child => {
 function changeTheme() {
     body.classList.toggle("dark-theme");
 }
+
+const numberSelect = document.getElementById('numberSelect');
+        for (let i = 6; i <= 20; i++) {
+            const option = document.createElement('option');
+            option.value = i;
+            option.text = i;
+            if (i === 8) {
+                option.selected = true;
+            }
+            numberSelect.appendChild(option);
+        }

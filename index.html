@@ -20,6 +20,19 @@
             <h1 class="title-first-part">Generate a </h1>
             <h1 class="title-second-part">random password</h1>
             <p>Never use an insecure password again</p>
+            <br>
+            <div class="characters">
+                <label for="numberSelect">Number of characters: </label>
+                <select id="numberSelect" name="numberSelect" class="number-select">
+                </select>
+            </div>
+            <div class="checkbox-container">
+                <label class="checkbox-label">Include special characters?</label>
+                <label class="pretty-checkbox">
+                    <input type="checkbox" id="agreeCheckbox">
+                    <span class="checkmark"></span>
+                </label>
+            </div>
             <button class="button-password-generator" onClick="assignPasswordsToButtons()">Generate passwords</button>
         </div>
         <div class="straight-line"></div>
