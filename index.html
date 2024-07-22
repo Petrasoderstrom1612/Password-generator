@@ -5,15 +5,20 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="index.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Nunito&display=swap" rel="stylesheet">
     <title>Password generator</title>
 </head>
 
 <body class="dark">
     <div class="main">
         <div class="intro-div">
-            <button onClick="changeTheme()">O</button>
+            <div class="theme-switcher">
+                <button class="toggle-switch" onClick="changeTheme()"></button>
+            </div>
             <h1 class="title-first-part">Generate a </h1>
-            <h1  class="title-second-part">random password</h1>
+            <h1 class="title-second-part">random password</h1>
             <p>Never use an insecure password again</p>
             <button class="button-password-generator" onClick="assignPasswordsToButtons()">Generate passwords</button>
         </div>

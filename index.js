@@ -1,6 +1,8 @@
 const characters = ["A","B","C","D","E","F","G","H","I"];
 let password1El = document.getElementById ("password1-el")
 let password2El = document.getElementById ("password2-el")
+let password3El = document.getElementById ("password3-el")
+let password4El = document.getElementById ("password4-el")
 let body = document.body;
 
 function generatePasswords() {
@@ -15,6 +17,8 @@ function generatePasswords() {
 function assignPasswordsToButtons() {
 password1El.innerHTML = generatePasswords()
 password2El.innerHTML = generatePasswords()
+password3El.innerHTML = generatePasswords()
+password4El.innerHTML = generatePasswords()
 }
 
 function changeTheme() {

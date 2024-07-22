@@ -1,3 +1,8 @@
+body{
+    font-family: "Nunito", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+}
 
 .main{
     display: flex;
@@ -56,4 +61,49 @@ p {
     color: white;
     text-align: center; 
     text-decoration: none; 
+    font-family: "Nunito", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+}
+
+.theme-switcher {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 20px;
+}
+
+.toggle-switch {
+    position: relative;
+    width: 48px; 
+    height: 25px; 
+    background-color: #ccc;
+    border-radius: 25px; 
+    cursor: pointer;
+    border: none;
+    outline: none;
+    transition: background-color 0.3s;
+    margin-left: -20px;
+}
+
+
+.toggle-switch::before {
+    content: "";
+    position: absolute;
+    top: 2px;
+    left: 2px;
+    width: 21px; 
+    height: 21px; 
+    background-color: white;
+    border-radius: 50%;
+    transition: transform 0.3s;
+}
+
+
+body.dark-theme .toggle-switch {
+    background-color: #10B981;
+}
+
+body.dark-theme .toggle-switch::before {
+    transform: translateX(23px); 
 }
