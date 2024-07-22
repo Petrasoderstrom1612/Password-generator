@@ -3,15 +3,15 @@ let password1El = document.getElementById ("password1-el")
 let password2El = document.getElementById ("password2-el")
 
 function generatePasswords() {
-    let randomPassword1 = ""
-    let randomPassword2 = "" 
+    let randomPassword = "" 
         for (let i = 0 ; i < 6; i++){
-            randomIndex1 = Math.floor(Math.random() * characters.length)
-            randomIndex2 = Math.floor(Math.random() * characters.length)
-            randomPassword1 += characters[randomIndex1]
-            randomPassword2 += characters[randomIndex2]
+            randomIndex = Math.floor(Math.random() * characters.length)
+            randomPassword += characters[randomIndex]
         }
-    console.log("randomPassword1", randomPassword1)
-    password1El.innerHTML = randomPassword1
-    password2El.innerHTML = randomPassword2
+    return randomPassword
+}
+
+function assignPasswordsToButtons() {
+password1El.innerHTML = generatePasswords()
+password2El.innerHTML = generatePasswords()
 }
