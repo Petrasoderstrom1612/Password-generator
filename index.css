@@ -107,3 +107,19 @@ body.dark-theme .toggle-switch {
 body.dark-theme .toggle-switch::before {
     transform: translateX(23px); 
 }
+
+.passwords{
+    margin-top:20px;
+    display: flex;
+    flex-wrap: wrap;
+
+}
+
+.password{
+    background-color: #273549;
+    color:#56D789;
+    padding: 10px 20px;
+    font-size: 16px;
+    border-radius: 4px; 
+    margin:2px;
+}
