@@ -77,7 +77,7 @@ p {
     position: relative;
     width: 48px; 
     height: 25px; 
-    background-color: #ccc;
+    background-color: #1F2937;
     border-radius: 25px; 
     cursor: pointer;
     border: none;
@@ -101,7 +101,7 @@ p {
 
 
 body.dark-theme .toggle-switch {
-    background-color: #10B981;
+    background-color: #898484;
 }
 
 body.dark-theme .toggle-switch::before {
