@@ -1,0 +1,59 @@
+
+.main{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: left;
+    margin:0;
+}
+
+.intro-div{
+    display: flex;
+    align-items: flex-start;
+    flex-direction: column;
+}
+
+.title-first-part{
+    margin-bottom:-27px;
+}
+
+:root{
+    --background-color: #ECFDF5;
+    --second-title-color: #10B981;
+    --paragraph-color: #6B7280;
+}
+
+.dark-theme {
+    --background-color: #1F2937;
+    --text-color: white;
+    --paragraph-color: #D5D4D8;
+    --second-title-color: #4ADF86;
+}
+
+.title-second-part {
+    color: var(--second-title-color);
+}
+
+body {
+    background-color: var(--background-color);
+    color: var(--text-color);
+    transition: background-color 0.3s, color 0.3s;
+}
+
+p {
+    color: var(--paragraph-color);
+    transition: color 0.3s;
+    margin-top: -5px;
+}
+
+.button-password-generator{
+    padding: 10px 20px;
+    font-size: 16px;
+    border: 1px solid #10B981; 
+    border-radius: 4px; 
+    background-color: #10B981; 
+    color: white;
+    text-align: center; 
+    text-decoration: none; 
+}
