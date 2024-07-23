@@ -23,13 +23,13 @@
             <br>
             <div class="characters">
                 <label for="numberSelect">Number of characters: </label>
-                <select id="numberSelect" name="numberSelect" class="number-select">
+                <select id="number-select-el" name="numberSelect" class="number-select" onChange="selectNumberOfCharacters()">
                 </select>
             </div>
             <div class="checkbox-container">
                 <label class="checkbox-label">Include special characters?</label>
                 <label class="pretty-checkbox">
-                    <input type="checkbox" id="agreeCheckbox">
+                    <input type="checkbox" id="agreeCheckbox" checked onChange="changeSpecialCharacters()">
                     <span class="checkmark"></span>
                 </label>
             </div>
