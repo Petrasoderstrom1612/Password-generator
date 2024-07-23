@@ -10,9 +10,27 @@ let includeSpecialCharacters = true
 let maxLoop = 8
 let arrayLength = characters.length
 
+function changeTheme() {
+    body.classList.toggle("dark-theme");
+}
+
+for (let i = 6; i <= 20; i++) { // This forloop needs to be outside of function to show the options when page renders, not needing to click first
+    const option = document.createElement('option');
+    option.value = i;
+    option.text = i;
+    if (i === 8) { //default number of characters displaied on render
+        option.selected = true;
+    }
+    numberSelectEl.appendChild(option);
+}
+
+function selectNumberOfCharacters(){
+    maxLoop = parseInt(numberSelectEl.value, 10); //10 to have full numbers
+}
+
 function changeSpecialCharacters(){
     includeSpecialCharacters = !includeSpecialCharacters
-    arrayLength = includeSpecialCharacters ? characters.length : 16;
+    arrayLength = includeSpecialCharacters ? characters.length : 16; //the length of the array where special characters start
 }
 
 function generatePasswords() {
@@ -25,34 +43,17 @@ function generatePasswords() {
 }
 
 function assignPasswordsToButtons() {
-password1El.textContent = generatePasswords()
-password2El.textContent = generatePasswords()
-password3El.textContent = generatePasswords()
-password4El.textContent = generatePasswords()
-passwordsEl.classList.add("passwords")
-Array.from(passwordsEl.children).forEach(child => {
-    child.classList.add("password");
-});
-console.log("password1El", password1El.textContent,password1El.textContent.length)
-console.log("password2El", password2El.textContent,password2El.textContent.length)
-console.log("password3El", password3El.textContent,password3El.textContent.length)
-console.log("password4El", password4El.textContent,password4El.textContent.length)
+    password1El.textContent = generatePasswords()
+    password2El.textContent = generatePasswords()
+    password3El.textContent = generatePasswords()
+    password4El.textContent = generatePasswords()
+    passwordsEl.classList.add("passwords")
+    Array.from(passwordsEl.children).forEach(child => {
+        child.classList.add("password"); //so that the background for passwords does not show prior to them being generated
+    });
 }
 
-function changeTheme() {
-    body.classList.toggle("dark-theme");
-}
-
-for (let i = 6; i <= 20; i++) {
-    const option = document.createElement('option');
-    option.value = i;
-    option.text = i;
-    if (i === 8) {
-        option.selected = true;
-    }
-    numberSelectEl.appendChild(option);
-}
-
-function selectNumberOfCharacters(){
-    maxLoop = parseInt(numberSelectEl.value, 10);
+function copyPassword(elementId) { //copy paste on click
+    const textToCopy = document.getElementById(elementId).textContent;
+    navigator.clipboard.writeText(textToCopy)
 }
